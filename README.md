@@ -374,7 +374,7 @@ BEGIN
     	INSERT INTO messages SELECT CONCAT('new order_id:', NEW.order_id);
 		
 		INSERT INTO pizza_sales
-			SELECT DISTINCT 
+	SELECT 
 	   a.order_id AS OrderId, 
 	   p.pizza_id As Pizza_ID,  
        	   pt.name AS Pizza_Name,
@@ -402,7 +402,6 @@ Activating the trigger
 ```sql
 SELECT * FROM pizza_sales ORDER BY OrderId;
 INSERT INTO pizza_order VALUES(99354,'2016-01-1','21:02:05'); 
-INSERT INTO order_details VALUES(99354,21350,'bbq_ckn_s',2);
 SELECT * FROM pizza_sales ORDER BY OrderId;
 ```
 ## Data Marts 
