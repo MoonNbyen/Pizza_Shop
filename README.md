@@ -414,8 +414,8 @@ SELECT * FROM pizza_sales ORDER BY OrderId;
 CREATE VIEW `Pizza_Sales_by_time_and_date_view` AS
 	SELECT *
     FROM pizza_sales_by_time_and_date;
-    
-   SELECT * FROM `Pizza_Sales_by_time_and_date_view`; 
+SELECT * FROM `Pizza_Sales_by_time_and_date_view`; 
+
    
  DROP VIEW IF EXISTS `Annual_Sales_View`;
  
@@ -423,6 +423,7 @@ CREATE VIEW `Annual_Sales_View` AS
 	SELECT *
     FROM annual_sales;
 SELECT * FROM `Annual_Sales_View`;
+
  
 DROP VIEW IF EXISTS `Monthly_Sales_View`;   
 CREATE VIEW `Monthly_Sales_View` AS
@@ -430,11 +431,13 @@ CREATE VIEW `Monthly_Sales_View` AS
     FROM monthly_sales;
 SELECT * FROM `Monthly_Sales_View`;
 
+
 DROP VIEW IF EXISTS `Pizza_Sales_View`;      
 CREATE VIEW `Pizza_Sales_View` AS
 	SELECT *
     FROM pizza_sales;
 SELECT * FROM `Pizza_Sales_View`;
+
 
 DROP VIEW IF EXISTS `Best_Seller_View`; 
 CREATE VIEW `Best_Seller_View` AS
