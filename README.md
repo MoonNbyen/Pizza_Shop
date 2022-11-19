@@ -1,7 +1,35 @@
 # Pizza_Shop
-Analysing Pizza Shop sales and which pizza type is the best seller.
+
+## Analytic plan
+
+The data include year 2015's sale record from pizza shop which include pizza type, date and time of order and the price of each type of pizza.
+Therefore it will be interesting to analysis following:
+
+Annual Total Sales
+Monthly Sales
+Sales in time, day and month
+Analysis the sales by pizza type.
+Find out the best seller pizza type and size
+
+## Database diagram
+
+<img width="413" alt="image" src="https://user-images.githubusercontent.com/115092078/202870320-45441dfb-ad53-4f90-bccf-b2a74a92366f.png">
 
 
+
+<img width="679" alt="Screen Shot 2022-11-19 at 21 21 42" src="https://user-images.githubusercontent.com/115092078/202870062-eaacd546-62c9-4a9e-9ff5-e9f92a9bb1e6.png">
+
+## Data Dimention
+
+<img width="749" alt="Screen Shot 2022-11-19 at 21 20 54" src="https://user-images.githubusercontent.com/115092078/202870064-ef97d617-8b82-45ca-a3d4-0482e225a726.png">
+
+##Datasets Used
+
+
+
+## SQL Code
+
+## Importing data
 
 Creating database called Pizza_sales.
 ```sql
@@ -98,7 +126,7 @@ To check data
 ```sql
 Show tables;
 ```
-Pizza Type information
+## Pizza Type information
 To see detail information for selected pizza type.
 
 ```sql
@@ -126,7 +154,7 @@ CALL GetsalesByPizzaType('bbq_ckn_l');
 
 ```
 
- Annual Sales 
+ ## Annual Sales 
  
 ```sql
 DROP PROCEDURE IF EXISTS Annual_Sales;
@@ -160,7 +188,7 @@ DELIMITER ;
 ```sql
 CALL Annual_Sales();
 ```
-Monthly Sales
+## Monthly Sales
 
 ```sql
 DROP PROCEDURE IF EXISTS Monthly_Sales;
@@ -196,7 +224,7 @@ DELIMITER ;
 CALL Monthly_Sales();
 ```
 
-Number of orders by,time,day and month 
+## Number of orders by,time,day and month 
 
 ```sql
 
@@ -235,7 +263,7 @@ DELIMITER ;
 CALL PizzaSalesTimeDate();
 ```
 
-Best Seller: Most ordered pizza type and size
+## Best Seller: Most ordered pizza type and size
 
 ```sql
 DROP PROCEDURE IF EXISTS Best_Seller_Pizza;
@@ -269,7 +297,7 @@ DELIMITER ;
 CALL Best_Seller_Pizza();
 ```
 
-Pizza Sales Operation 
+## Pizza Sales Operation 
 
 ```sql
 
@@ -319,7 +347,7 @@ CALL CreatePizzaSalesShop();
 SELECT * FROM pizza_sales ORDER BY OrderId;
 ```
 
-Trigger for after order 
+## Trigger for after order 
 ```sql
 use Pizza_Sales;
 ```
@@ -367,7 +395,7 @@ INSERT INTO pizza_order VALUES(99354,'2016-01-1','21:02:05');
 INSERT INTO order_details VALUES(99354,21350,'bbq_ckn_s',2);
 SELECT * FROM pizza_sales ORDER BY OrderId;
 ```
-Data Marts 
+## Data Marts 
 ```sql
 
  DROP VIEW IF EXISTS `Pizza Sales by time and date`;
