@@ -325,10 +325,10 @@ BEGIN
 	SELECT DISTINCT 
 	   a.order_id AS OrderId, 
 	   p.pizza_id As Pizza_ID,  
-       pt.name AS Pizza_Name,
+       	   pt.name AS Pizza_Name,
 	   p.price AS Price, 
 	   b.quantity AS Unit,
-       p.price * b.quantity AS Total_Price,
+           p.price * b.quantity AS Total_Price,
 	   a.time As Time,
 	   a.date AS Date
        
@@ -377,10 +377,10 @@ BEGIN
 			SELECT DISTINCT 
 	   a.order_id AS OrderId, 
 	   p.pizza_id As Pizza_ID,  
-       pt.name AS Pizza_Name,
+       	   pt.name AS Pizza_Name,
 	   p.price AS Price, 
 	   b.quantity AS Unit,
-       p.price * b.quantity AS Total_Price,
+      	   p.price * b.quantity AS Total_Price,
 	   a.time As Time,
 	   a.date AS Date
        
@@ -415,7 +415,8 @@ CREATE VIEW `Pizza_Sales_by_time_and_date_view` AS
 	SELECT *
     FROM pizza_sales_by_time_and_date;
 SELECT * FROM `Pizza_Sales_by_time_and_date_view`; 
-
+```
+```sql
    
  DROP VIEW IF EXISTS `Annual_Sales_View`;
  
@@ -423,21 +424,24 @@ CREATE VIEW `Annual_Sales_View` AS
 	SELECT *
     FROM annual_sales;
 SELECT * FROM `Annual_Sales_View`;
-
+```
+```sql
  
 DROP VIEW IF EXISTS `Monthly_Sales_View`;   
 CREATE VIEW `Monthly_Sales_View` AS
 	SELECT *
     FROM monthly_sales;
 SELECT * FROM `Monthly_Sales_View`;
-
+```
+```sql
 
 DROP VIEW IF EXISTS `Pizza_Sales_View`;      
 CREATE VIEW `Pizza_Sales_View` AS
 	SELECT *
     FROM pizza_sales;
 SELECT * FROM `Pizza_Sales_View`;
-
+```
+```sql
 
 DROP VIEW IF EXISTS `Best_Seller_View`; 
 CREATE VIEW `Best_Seller_View` AS
