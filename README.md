@@ -401,7 +401,7 @@ DELIMITER ;
 Activating the trigger 
 ```sql
 SELECT * FROM pizza_sales ORDER BY OrderId;
-INSERT INTO pizza_order VALUES(99354,'2016-01-1','21:02:05'); 
+INSERT INTO pizza_sales VALUES(99354,'bbq_crp','Barbeque Pizza',20.50,2,2*20.50,'23:40:38','2016-01-1'); 
 SELECT * FROM pizza_sales ORDER BY OrderId;
 ```
 ## Data Marts 
