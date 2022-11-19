@@ -23,7 +23,17 @@ Find out the best seller pizza type and size
 
 <img width="749" alt="Screen Shot 2022-11-19 at 21 20 54" src="https://user-images.githubusercontent.com/115092078/202870064-ef97d617-8b82-45ca-a3d4-0482e225a726.png">
 
-##Datasets Used
+## Datasets Used
+
+I uploaded data into gihub but my code's file path are from my computer.
+
+https://github.com/MoonNbyen/Pizza_Shop/blob/main/pizzas.csv
+
+https://github.com/MoonNbyen/Pizza_Shop/blob/main/orders.csv
+
+https://github.com/MoonNbyen/Pizza_Shop/blob/main/pizza_types%20.csv
+
+https://github.com/MoonNbyen/Pizza_Shop/blob/main/order_details.csv
 
 
 
