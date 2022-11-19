@@ -408,34 +408,39 @@ SELECT * FROM pizza_sales ORDER BY OrderId;
 ## Data Marts 
 ```sql
 
- DROP VIEW IF EXISTS `Pizza Sales by time and date`;
  
-CREATE VIEW `Pizza Sales by time and date` AS
+ DROP VIEW IF EXISTS `Pizza_Sales_by_time_and_date_view`;
+ 
+CREATE VIEW `Pizza_Sales_by_time_and_date_view` AS
 	SELECT *
-    FROM pizza_sales_by_time_and_date
-    Group by date;
- DROP VIEW IF EXISTS `Annual Sales`;
+    FROM pizza_sales_by_time_and_date;
+    
+   SELECT * FROM `Pizza_Sales_by_time_and_date_view`; 
+   
+ DROP VIEW IF EXISTS `Annual_Sales_View`;
  
-CREATE VIEW `Annual Sales` AS
+CREATE VIEW `Annual_Sales_View` AS
 	SELECT *
     FROM annual_sales;
-   
-DROP VIEW IF EXISTS `Monthly Sales`;   
-CREATE VIEW `Monthly Sales` AS
+SELECT * FROM `Annual_Sales_View`;
+ 
+DROP VIEW IF EXISTS `Monthly_Sales_View`;   
+CREATE VIEW `Monthly_Sales_View` AS
 	SELECT *
     FROM monthly_sales;
+SELECT * FROM `Monthly_Sales_View`;
 
-DROP VIEW IF EXISTS `Pizza Sales`;      
-CREATE VIEW `Pizza Sales` AS
+DROP VIEW IF EXISTS `Pizza_Sales_View`;      
+CREATE VIEW `Pizza_Sales_View` AS
 	SELECT *
     FROM pizza_sales;
+SELECT * FROM `Pizza_Sales_View`;
 
-
-DROP VIEW IF EXISTS `Best Seller`; 
-CREATE VIEW `Best Seller` AS
+DROP VIEW IF EXISTS `Best_Seller_View`; 
+CREATE VIEW `Best_Seller_View` AS
 	SELECT *
-    FROM best_seller_pizza
-
+    FROM best_seller_pizza;
+SELECT * FROM `Best_Seller_View`;
 ```
 
 
